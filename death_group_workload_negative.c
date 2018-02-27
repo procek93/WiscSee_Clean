@@ -57,7 +57,7 @@ main()
 
 	                if( status )
 	                {
-	                    perror( file_path );
+	                    perror( filename_buf );
 	                    printf("failed to erase file\n");
 	                    closedir(dir);
 	                    return;
