@@ -253,7 +253,7 @@ class TestRequestPositive(unittest.TestCase):
     def test_run(self):
         class LocalExperiment(experiment.Experiment):
             def setup_workload(self):
-                self.conf['workload_class'] = "LinuxRequestScaleAgingWrite"
+                self.conf['age_workload_class'] = "LinuxRequestScaleAgingWrite"
                 self.conf['workload_class'] = "LinuxRequestScaleWorkloadPositive"
 
         para = experiment.get_shared_nolist_para_dict(expname="exp_request_positive",
@@ -277,7 +277,7 @@ class TestRequestNegative(unittest.TestCase):
     def test_run(self):
         class LocalExperiment(experiment.Experiment):
             def setup_workload(self):
-                self.conf['workload_class'] = "LinuxRequestScaleAgingWrite"
+                self.conf['age_workload_class'] = "LinuxRequestScaleAgingWrite"
                 self.conf['workload_class'] = "LinuxRequestScaleWorkloadNegative"
 
         para = experiment.get_shared_nolist_para_dict(expname="exp_request_negative",
