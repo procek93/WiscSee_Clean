@@ -303,7 +303,7 @@ class TestLocalityPositive(unittest.TestCase):
     def test_run(self):
         class LocalExperiment(experiment.Experiment):
             def setup_workload(self):
-                self.conf['workload_class'] = "LinuxLocalityAgingWrite"
+                self.conf['age_workload_class'] = "LinuxLocalityAgingWrite"
                 self.conf['workload_class'] = "LinuxLocalityWorkloadPositive"
 
         para = experiment.get_shared_nolist_para_dict(expname="exp_locality_positive",
@@ -327,7 +327,7 @@ class TestLocalityNegative(unittest.TestCase):
     def test_run(self):
         class LocalExperiment(experiment.Experiment):
             def setup_workload(self):
-                self.conf['workload_class'] = "LinuxLocalityAgingWrite"
+                self.conf['age_workload_class'] = "LinuxLocalityAgingWrite"
                 self.conf['workload_class'] = "LinuxLocalityWorkloadNegative"
 
         para = experiment.get_shared_nolist_para_dict(expname="exp_locality_negative",
@@ -367,7 +367,7 @@ class TestDeathPositive(unittest.TestCase):
     def test_run(self):
         class LocalExperiment(experiment.Experiment):
             def setup_workload(self):
-                self.conf['workload_class'] = "LinuxDeathAgingWrite"
+                self.conf['age_workload_class'] = "LinuxDeathAgingWrite"
                 self.conf['workload_class'] = "LinuxDeathWorkloadPositive"
 
         para = experiment.get_shared_nolist_para_dict(expname="exp_death_positive",
@@ -391,7 +391,7 @@ class TestDeathNegative(unittest.TestCase):
     def test_run(self):
         class LocalExperiment(experiment.Experiment):
             def setup_workload(self):
-                self.conf['workload_class'] = "LinuxDeathAgingWrite"
+                self.conf['age_workload_class'] = "LinuxDeathAgingWrite"
                 self.conf['workload_class'] = "LinuxDeathWorkloadNegative"
 
         para = experiment.get_shared_nolist_para_dict(expname="exp_death_negative",

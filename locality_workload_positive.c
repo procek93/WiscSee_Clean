@@ -49,10 +49,12 @@ main()
                     return;
             }
 
+            printf("reading file...\n");
             while((ret_in = read (input_fd, &buffer, READ_REQUEST_SIZE)) > 0)
             {
-                printf("reading file...\n");
+                //printf("reading file...\n");
             }
+            printf("closing file...\n");
 
             close(input_fd);
 

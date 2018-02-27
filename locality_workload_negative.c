@@ -60,11 +60,12 @@ main()
                     return;
             }
 
+            printf("reading file...\n");
             while((ret_in = read (input_fd, &buffer, READ_REQUEST_SIZE)) > 0)
             {
-                printf("reading file...\n");
+               // printf("reading file...\n");
             }
-
+            printf("closing file...\n");
             close(input_fd);
 
             chdir("..");
@@ -103,10 +104,9 @@ int in_place_overwrite(char * file_name)
         return -1;
     }
 
-
+    printf("in place overwrite occuring...\n");
     while( fseek(f, quarter_block * offset_multiplier, SEEK_SET) == 0 )
     {
-        printf("in place overwrite occuring...\n");
 
         for(x = 0; x < quarter_block; x++)
         {
@@ -119,9 +119,9 @@ int in_place_overwrite(char * file_name)
 
     offset_multiplier = 1;
 
+    printf("in place overwrite occuring...\n");
     while( fseek(f, quarter_block * offset_multiplier, SEEK_SET) == 0 )
     {
-        printf("in place overwrite occuring...\n");
 
         for(x = 0; x < quarter_block; x++)
         {
