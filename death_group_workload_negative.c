@@ -55,12 +55,13 @@ main()
 
                     status = remove(filename_buf);
 
-                    if(status != 0)
-                    {
-                        printf("failed to erase file\n");
-                        closedir(dir);
-                        return;
-                    }
+	                if( status )
+	                {
+	                    perror( file_path );
+	                    printf("failed to erase file\n");
+	                    closedir(dir);
+	                    return;
+	                }
                     deleted_count++;
                 }
                 incrementer++;
