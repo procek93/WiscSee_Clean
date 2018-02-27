@@ -110,7 +110,7 @@ class LinuxRequestScaleAgingWrite(Workload):
 
     def run(self):
         mnt = self.conf["fs_mount_point"]
-        cmd = "~/WiscSee_Clean/request_size_aging_workload".format(mnt)
+        cmd = "../../request_size_aging_workload".format(mnt)
         print cmd
         subprocess.call(cmd, shell=True)
         subprocess.call("sync")
@@ -125,7 +125,7 @@ class LinuxRequestScaleWorkloadPositive(Workload):
 
     def run(self):
         mnt = self.conf["fs_mount_point"]
-        cmd = "~/WiscSee_Clean/request_size_workload_positive".format(mnt)
+        cmd = "../../request_size_workload_positive".format(mnt)
         print cmd
         subprocess.call(cmd, shell=True)
         subprocess.call("sync")
@@ -139,7 +139,7 @@ class LinuxRequestScaleWorkloadNegative(Workload):
 
     def run(self):
         mnt = self.conf["fs_mount_point"]
-        cmd = "~/WiscSee_Clean/request_size_workload_negative".format(mnt)
+        cmd = "../../request_size_workload_negative".format(mnt)
         print cmd
         subprocess.call(cmd, shell=True)
         subprocess.call("sync")
