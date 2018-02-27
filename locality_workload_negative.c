@@ -15,6 +15,7 @@
 char * my_strings[] = {"loc_root", "loc_dirA", "loc_dirB", "loc_dirC", "loc_dirD", "loc_dirE", "loc_dirF", "loc_dirG", "loc_dirH", "loc_dirI", "loc_dirJ"};
 
 int cmd_rmrf( char * path);
+int in_place_overwrite(char * file_name);
 
 main()
 {
@@ -54,7 +55,7 @@ main()
 
 
             /* Create input file descriptor */
-            input_fd = open ("large_file.txt", O_RDONLY);
+            input_fd = open ("large_vim ile.txt", O_RDONLY);
             if (input_fd == -1) {
                     perror ("open");
                     return;
