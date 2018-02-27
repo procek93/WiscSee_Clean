@@ -80,12 +80,15 @@ main()
 	                if( status )
 	                {
 	                    perror( filename_buf );
-	                    printf("failed to erase file\n");
-	                    closedir(dir);
-	                    return;
 	                }
-                    deleted_count++;
+                    else
+                    {
+                        deleted_count++;
+                        printf("removed %s\n", filename_buf);
+                    }
+
                 }
+
                 incrementer++;
             }
 

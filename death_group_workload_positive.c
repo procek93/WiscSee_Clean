@@ -34,6 +34,9 @@ main()
 
     char filename_buf[20];  
 
+    int file_del_counter = 0;
+    int file_index = 0;
+
     if ( dir )
     {
         /* we make a brass assumption that the directory exists */
@@ -51,7 +54,7 @@ main()
 
 
         printf("walking through directories for death deletions\n");
-        for(x = 2; x < 11; x++)
+        for(x = 1; x < 11; x++)
         {
             /* we also just assume all the other directories exist since we run the prior workload */
             chdir(my_strings[x]);
@@ -66,19 +69,22 @@ main()
                 return;
             }
 
-            /* delete 20 logically contiguous files */
-            for(y = 0; y < 20; y++)
+            while(file_del_counter < 20)
             {
-                sprintf(filename_buf, "small_file_%d.txt", x);
+                sprintf(filename_buf, "small_file_%d.txt", file_index);
 
                 status = remove(filename_buf);
 
                 if( status )
                 {
+                    //don't incriment file_del_counter
                     perror( filename_buf );
-                    printf("failed to erase file\n");
-                    closedir(dir);
-                    return;
+                    file_index++;
+                }
+                else
+                {
+                    file_del_counter++;
+                    printf("removed %s\n", filename_buf);
                 }
             }
 
@@ -86,7 +92,7 @@ main()
         }
 
         /* write new files in each directory */
-        for(x = 2; x < 11; x++)
+        for(x = 1; x < 11; x++)
         {
             /* we also just assume all the other directories exist since we run the prior workload */
             chdir(my_strings[x]);
