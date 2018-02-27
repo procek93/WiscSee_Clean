@@ -55,6 +55,8 @@ main()
         printf("walking through directories for death deletions\n");
         for(x = 2; x < 11; x++)
         {
+            deleted_count = 0;
+            incrementer = 0;
             /* we also just assume all the other directories exist since we run the prior workload */
             chdir(my_strings[x]);
 
