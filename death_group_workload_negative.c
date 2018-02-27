@@ -53,7 +53,7 @@ main()
             }
 
         printf("walking through directories for death deletions\n");
-        for(x = 1; x < 11; x++)
+        for(x = 2; x < 11; x++)
         {
             /* we also just assume all the other directories exist since we run the prior workload */
             chdir(my_strings[x]);
@@ -93,7 +93,7 @@ main()
         }
 
         /* write new files in each directory */
-        for(x = 1; x < 11; x++)
+        for(x = 2; x < 11; x++)
         {
             /* we also just assume all the other directories exist since we run the prior workload */
             chdir(my_strings[x]);
