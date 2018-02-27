@@ -11,19 +11,20 @@
 
 /* directory names */
 
-char * my_strings[] = {"loc_root", "loc_dirA", "loc_dirB", "loc_dirC", "loc_dirD", "loc_dirE", "loc_dirF", "loc_dirG", "loc_dirH", "loc_dirI", "loc_dirJ"};
+char * my_strings[] = {"./loc_root", "loc_dirA", "loc_dirB", "loc_dirC", "loc_dirD", "loc_dirE", "loc_dirF", "loc_dirG", "loc_dirH", "loc_dirI", "loc_dirJ"};
 
 int cmd_rmrf( char * path);
 
 main()
 {
+    printf("trying to open root\n");
     DIR * dir = opendir(my_strings[0]);
     int status = 0;
 
     int loop_count = 1000;
 
-
     printf("checking for root\n");
+
     if ( dir )
     {
         /* root exists */
@@ -98,9 +99,10 @@ main()
     }
     else
     {
+        printf( "ERROR: OTHER\n" );
         closedir(dir);
         return;
-        printf( "ERROR: OTHER\n" );
+
     }
 
     closedir(dir);
