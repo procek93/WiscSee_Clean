@@ -38,7 +38,7 @@ main()
         chdir(my_strings[0]);
 
         printf("walking through directories\n");
-        for(x = 1; x < 6; x++)
+        for(x = 1; x < 3; x++)
         {
             /* we also just assume all the other directories exist since we run the prior workload */
             chdir(my_strings[x]);
