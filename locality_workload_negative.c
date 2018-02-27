@@ -117,7 +117,7 @@ int in_place_overwrite(char * file_name)
         offset_multiplier = offset_multiplier + 2;
 
     }
-
+#if 0
     offset_multiplier = 1;
 
     printf("in place overwrite occuring...\n");
@@ -132,7 +132,7 @@ int in_place_overwrite(char * file_name)
         offset_multiplier = offset_multiplier + 2;
 
     }
-
+#endif
 
     fclose(f);
 

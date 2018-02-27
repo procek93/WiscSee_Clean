@@ -199,7 +199,7 @@ int create_file_pools( int request_size_bytes )
 
     int status = 0;
 
-    int total_directory_size_bytes = 10 * 1024 * 1024; //20MB ( 1kb * 1024 * 20)
+    int total_directory_size_bytes = 5 * 1024 * 1024; //10MB ( 1kb * 1024 * 20)
     int total_number_of_files = total_directory_size_bytes / request_size_bytes;
 
     int total_number_of_files_divided = total_number_of_files / 2;
