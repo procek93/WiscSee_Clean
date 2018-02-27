@@ -19,6 +19,8 @@ int cmd_rmrf( char * path);
 main()
 {
 
+    char cwd[1024];
+    
     FILE *f;
     DIR * dir = opendir(my_strings[0]);
     int status = 0;
@@ -40,11 +42,31 @@ main()
         /* we make a brass assumption that the directory exists */
         chdir(my_strings[0]);
 
+            if (getcwd(cwd, sizeof(cwd)) != NULL)
+            {
+                fprintf(stdout, "Current working dir: %s\n", cwd);
+            }
+            else
+            {
+                perror("getcwd() error");
+                return;
+            }
+
         printf("walking through directories for death deletions\n");
         for(x = 1; x < 11; x++)
         {
             /* we also just assume all the other directories exist since we run the prior workload */
             chdir(my_strings[x]);
+
+            if (getcwd(cwd, sizeof(cwd)) != NULL)
+            {
+                fprintf(stdout, "Current working dir: %s\n", cwd);
+            }
+            else
+            {
+                perror("getcwd() error");
+                return;
+            }
 
             /* delete 20 logically contiguous files */
             while(deleted_count != 20)
