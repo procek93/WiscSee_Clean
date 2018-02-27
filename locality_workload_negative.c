@@ -42,7 +42,8 @@ main()
             /* we also just assume all the other directories exist since we run the prior workload */
             chdir(my_strings[x]);
 
-            for(y = 0; y < 50; y++)
+            printf("changed directory\n");
+            for(y = 0; y < 1; y++)
             {
                 /* 50 in place overwrites to trigger garbage collections */
                 /* do in-place overwrites across the large file */
