@@ -93,7 +93,7 @@ class Directory_Purge(Workload):
 
     def run(self):
         mnt = self.conf["fs_mount_point"]
-        cmd = "~/AdvOS_WiscSee/directory_purge".format(mnt)
+        cmd = "~/WiscSee_Clean/directory_purge".format(mnt)
         print cmd
         subprocess.call(cmd, shell=True)
         subprocess.call("sync")
@@ -110,7 +110,7 @@ class LinuxRequestScaleAgingWrite(Workload):
 
     def run(self):
         mnt = self.conf["fs_mount_point"]
-        cmd = "~/AdvOS_WiscSee/request_size_aging_workload".format(mnt)
+        cmd = "~/WiscSee_Clean/request_size_aging_workload".format(mnt)
         print cmd
         subprocess.call(cmd, shell=True)
         subprocess.call("sync")
@@ -125,7 +125,7 @@ class LinuxRequestScaleWorkloadPositive(Workload):
 
     def run(self):
         mnt = self.conf["fs_mount_point"]
-        cmd = "~/AdvOS_WiscSee/request_size_workload_positive".format(mnt)
+        cmd = "~/WiscSee_Clean/request_size_workload_positive".format(mnt)
         print cmd
         subprocess.call(cmd, shell=True)
         subprocess.call("sync")
@@ -139,7 +139,7 @@ class LinuxRequestScaleWorkloadNegative(Workload):
 
     def run(self):
         mnt = self.conf["fs_mount_point"]
-        cmd = "~/AdvOS_WiscSee/request_size_workload_negative".format(mnt)
+        cmd = "~/WiscSee_Clean/request_size_workload_negative".format(mnt)
         print cmd
         subprocess.call(cmd, shell=True)
         subprocess.call("sync")
@@ -155,7 +155,7 @@ class LinuxLocalityAgingWrite(Workload):
 
     def run(self):
         mnt = self.conf["fs_mount_point"]
-        cmd = "~/AdvOS_WiscSee/locality_aging_workload".format(mnt)
+        cmd = "~/WiscSee_Clean/locality_aging_workload".format(mnt)
         print cmd
         subprocess.call(cmd, shell=True)
         subprocess.call("sync")
@@ -170,7 +170,7 @@ class LinuxLocalityWorkloadPositive(Workload):
 
     def run(self):
         mnt = self.conf["fs_mount_point"]
-        cmd = "~/AdvOS_WiscSee/locality_workload_positive".format(mnt)
+        cmd = "~/WiscSee_Clean/locality_workload_positive".format(mnt)
         print cmd
         subprocess.call(cmd, shell=True)
         subprocess.call("sync")
@@ -184,7 +184,7 @@ class LinuxLocalityWorkloadNegative(Workload):
 
     def run(self):
         mnt = self.conf["fs_mount_point"]
-        cmd = "~/AdvOS_WiscSee/locality_workload_negative".format(mnt)
+        cmd = "~/WiscSee_Clean/locality_workload_negative".format(mnt)
         print cmd
         subprocess.call(cmd, shell=True)
         subprocess.call("sync")
@@ -201,7 +201,7 @@ class LinuxDeathAgingWrite(Workload):
 
     def run(self):
         mnt = self.conf["fs_mount_point"]
-        cmd = "~/AdvOS_WiscSee/death_group_aging_workload".format(mnt)
+        cmd = "~/WiscSee_Clean/death_group_aging_workload".format(mnt)
         print cmd
         subprocess.call(cmd, shell=True)
         subprocess.call("sync")
@@ -216,7 +216,7 @@ class LinuxDeathWorkloadPositive(Workload):
 
     def run(self):
         mnt = self.conf["fs_mount_point"]
-        cmd = "~/AdvOS_WiscSee/death_group_workload_positive".format(mnt)
+        cmd = "~/WiscSee_Clean/death_group_workload_positive".format(mnt)
         print cmd
         subprocess.call(cmd, shell=True)
         subprocess.call("sync")
@@ -230,7 +230,7 @@ class LinuxDeathWorkloadNegative(Workload):
 
     def run(self):
         mnt = self.conf["fs_mount_point"]
-        cmd = "~/AdvOS_WiscSee/death_group_workload_negative".format(mnt)
+        cmd = "~/WiscSee_Clean/death_group_workload_negative".format(mnt)
         print cmd
         subprocess.call(cmd, shell=True)
         subprocess.call("sync")
