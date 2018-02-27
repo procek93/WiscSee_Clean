@@ -37,22 +37,21 @@ main()
         chdir(my_strings[0]);
 
         printf("walking through directories\n");
-        for(x = 1; x < 11; x++)
+        for(x = 1; x < 6; x++)
         {
             /* we also just assume all the other directories exist since we run the prior workload */
             chdir(my_strings[x]);
 
             printf("changed directory\n");
-            for(y = 0; y < 1; y++)
+
+            /* 50 in place overwrites to trigger garbage collections */
+            /* do in-place overwrites across the large file */
+            status = in_place_overwrite("large_file.txt");
+            if( status == -1 )
             {
-                /* 50 in place overwrites to trigger garbage collections */
-                /* do in-place overwrites across the large file */
-                status = in_place_overwrite("large_file.txt");
-                if( status == -1 )
-                {
-                    printf("in place overwrite failed\n");
-                }
+                printf("in place overwrite failed\n");
             }
+
 
             /* Create input file descriptor */
             input_fd = open ("large_file.txt", O_RDONLY);
