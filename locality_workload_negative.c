@@ -55,7 +55,7 @@ main()
 
 
             /* Create input file descriptor */
-            input_fd = open ("large_vim ile.txt", O_RDONLY);
+            input_fd = open ("large_file.txt", O_RDONLY);
             if (input_fd == -1) {
                     perror ("open");
                     return;
