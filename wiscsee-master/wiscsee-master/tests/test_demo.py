@@ -257,7 +257,7 @@ class TestRequestPositive(unittest.TestCase):
                 self.conf['workload_class'] = "LinuxRequestScaleWorkloadPositive"
 
         para = experiment.get_shared_nolist_para_dict(expname="exp_request_positive",
-                                                      lbabytes=256*MB)
+                                                      lbabytes=512*MB)
         para.update(
             {
                 'device_path': "/dev/loop0",
@@ -281,7 +281,7 @@ class TestRequestNegative(unittest.TestCase):
                 self.conf['workload_class'] = "LinuxRequestScaleWorkloadNegative"
 
         para = experiment.get_shared_nolist_para_dict(expname="exp_request_negative",
-                                                      lbabytes=256*MB)
+                                                      lbabytes=512*MB)
         para.update(
             {
                 'device_path': "/dev/loop0",
