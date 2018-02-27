@@ -23,10 +23,11 @@ main()
     int loop_count = 1000;
 
 
+    printf("checking for root\n");
     if ( dir )
     {
         /* root exists */
-        //printf( "ROOT FOUND\n" );
+        printf( "root found!\n" );
         //printf( "DELETING ROOT\n");
         
         status = cmd_rmrf( my_strings[0] );
@@ -67,6 +68,7 @@ main()
     }
     else if (ENOENT == errno)
     {
+        printf("creating heirarchy\n");
         while (loop_count != 0)
         {
             /* directory does not exist */
@@ -98,7 +100,7 @@ main()
     {
         closedir(dir);
         return;
-        //printf( "ERROR: OTHER\n" );
+        printf( "ERROR: OTHER\n" );
     }
 
     closedir(dir);
