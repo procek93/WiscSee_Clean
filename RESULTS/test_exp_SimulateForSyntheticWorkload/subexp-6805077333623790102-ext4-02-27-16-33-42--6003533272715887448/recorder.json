@@ -1,0 +1,45 @@
+{
+    "general_accumulator": {
+        "channel_busy_time": {
+            "channel_0-write-Unknown": 51200000, 
+            "channel_9-write-Unknown": 51200000, 
+            "channel_13-write-Unknown": 51200000, 
+            "channel_14-write-Unknown": 51200000, 
+            "channel_5-write-Unknown": 51200000, 
+            "channel_12-write-Unknown": 51200000, 
+            "channel_11-write-Unknown": 51200000, 
+            "channel_6-write-Unknown": 51200000, 
+            "channel_3-write-Unknown": 51200000, 
+            "channel_10-write-Unknown": 51200000, 
+            "channel_15-write-Unknown": 51200000, 
+            "channel_2-write-Unknown": 51200000, 
+            "channel_8-write-Unknown": 51200000, 
+            "channel_4-write-Unknown": 51200000, 
+            "channel_1-write-Unknown": 51200000, 
+            "channel_7-write-Unknown": 51200000
+        }, 
+        "FORGROUND": {
+            "physical_write": 4096
+        }, 
+        "flash_ops": {
+            "OP_WRITE": 4096
+        }, 
+        "traffic": {
+            "write": 8388608
+        }
+    }, 
+    "ftl_func_user_traffic": [
+        {
+            "timestamp": 0.0, 
+            "write_traffic_size": 0, 
+            "discard_traffic_size": 0, 
+            "read_traffic_size": 0
+        }
+    ], 
+    "simulation_duration": 100000000.0, 
+    "ftl_func_erasure_count_dist": [
+        {
+            "0": 4096
+        }
+    ]
+}

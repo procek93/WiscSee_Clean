@@ -1,0 +1,49 @@
+{
+    "ftl_func_user_traffic": [
+        {
+            "timestamp": 0.0, 
+            "write_traffic_size": 0, 
+            "discard_traffic_size": 0, 
+            "read_traffic_size": 0
+        }, 
+        {
+            "timestamp": 0.1, 
+            "write_traffic_size": 2056192, 
+            "discard_traffic_size": 4096, 
+            "read_traffic_size": 90112
+        }, 
+        {
+            "timestamp": 0.2, 
+            "write_traffic_size": 4104192, 
+            "discard_traffic_size": 4096, 
+            "read_traffic_size": 90112
+        }
+    ], 
+    "workload_duration_sec": 0.0, 
+    "general_accumulator": {
+        "traffic": {}
+    }, 
+    "ftl_func_valid_ratios": [
+        {
+            "1.00": 32
+        }, 
+        {
+            "0.02": 2, 
+            "1.00": 32, 
+            "0.97": 8, 
+            "0.98": 8
+        }, 
+        {
+            "0.95": 14, 
+            "1.00": 46, 
+            "0.97": 2, 
+            "0.98": 2, 
+            "0.02": 2
+        }
+    ], 
+    "simulation_duration": 300000000.0, 
+    "write_bandwidth": "NA", 
+    "workload_duration_nsec": 0, 
+    "interest_workload_start": 208140000, 
+    "interest_workload_end": 208140000
+}
